@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -42,7 +43,7 @@
 
 
 
-            <EditText
+            <TextView
                 android:id="@+id/eq1_textview"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -75,7 +76,7 @@
 
 
 
-            <EditText
+            <TextView
                 android:id="@+id/eq2_textview"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -108,7 +109,7 @@
 
 
 
-            <EditText
+            <TextView
                 android:id="@+id/eq3_textview"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -130,16 +131,26 @@
             android:text="calculate"
             style="@style/num_btn_style"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="50dp"
+            app:backgroundTint="@null"
+            android:text="reset"
+            android:id="@+id/reset_btn"
+            style="@style/num_btn_style"/>
+
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/solution_textview"
         android:layout_width="match_parent"
+        android:textSize="20sp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="@color/black"
-        android:hint="enter values before pressing calculate"/>
+        android:hint="enter values before calculating"/>
 
 
 </LinearLayout>

@@ -14,13 +14,13 @@ public class Results {
         this.x0Info = x0Info;
     }
 
-    private String aInfo; // a1, a2, a3
-    private String mSmallInfo; // m1, m2, m3
-    private String mInfo; // m
-    private String mBigInfo; // M1, M2, M3
-    private String calculations;
-    private String x0Info;
-    private String finalResult;
+    private String aInfo = ""; // a1, a2, a3
+    private String mSmallInfo = ""; // m1, m2, m3
+    private String mInfo = ""; // m
+    private String mBigInfo = ""; // M1, M2, M3
+    private String calculations = "";
+    private String x0Info = "";
+    private String finalResult = "";
 
     public String getFinalResult() {
         return finalResult;
@@ -104,5 +104,15 @@ public class Results {
 
     public void setX0Info(String x0Info) {
         this.x0Info = x0Info;
+    }
+
+    public void reset() {
+        this.aInfo = "";
+        this.mSmallInfo = "";
+        this.mInfo = "";
+        this.mBigInfo = "";
+        this.calculations = "";
+        this.x0Info = "";
+        this.finalResult = "";
     }
 }
