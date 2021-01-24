@@ -1,1 +1,1 @@
-# ChineseTheoromCalculator
+A simple Chinese Theorom Calculator
