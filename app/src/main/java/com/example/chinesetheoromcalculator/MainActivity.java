@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 results = calculator.getResults();
 
-                if(calculator.isValidResults){
+                if (calculator.isValidResults) {
                     solutionTV.setText(
                             results.getaInfo() +
                                     System.lineSeparator() + results.getmSmallInfo() + System.lineSeparator() + results.getmInfo() +
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     resetBtn.setVisibility(View.VISIBLE);
                 }
-                else{
+                else {
                     Toast.makeText(MainActivity.this, "Invalid parameters. Try Again.", Toast.LENGTH_SHORT).show();
                 }
 
@@ -122,7 +122,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 updateValues(v, aInput, bInput, calculator);
             }
-        }).show();
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.SlidingDialogAnimation;
+        dialog.show();
     }
 
     private void updateValues(View v, int aInput, int bInput, Calculator calculator) {
